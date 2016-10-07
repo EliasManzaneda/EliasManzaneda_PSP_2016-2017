@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Inicio</title>
+<style type="text/css">
+body{
+	background-color: #F2F2F2;
+	color: #444;
+	font: 12px Arial;
+	margin: 0;
+	padding: 0;
+}
+input, label{
+	display: block;
+	width: 340px;
+}
+</style>
+</head>
+<body>
+
+	<h1>Página index.html</h1>
+	<h2>Forfmulario de sugerencias</h2>
+	<form action="/salida.html" method="post">
+		<label for="nombre">Nombre:</label>
+		<input type="text" name="nombre"/>
+		<label for="apellido">Apellido:</label>
+		<input type="text" name="apellido" />
+		<label for="correo">Correo Electrónico:</label>
+		<input type="text" name="correo" />
+		<label for="sugerencia">Sugerencia:</label>
+		<textarea name="sugerencia" rows="10" cols="40"></textarea>
+		<input type="submit" name="enviar" value="enviar" />
+	</form>
+</body>
+</html>
