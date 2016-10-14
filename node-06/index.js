@@ -1,0 +1,11 @@
+var servidor = require('./server.js');
+var enrutador = require('./router.js');
+var manejador = require('./handler.js');
+var peticion = {};
+peticion["/"] = manejador.inicio;
+peticion["/inicio"] = manejador.inicio;
+peticion["/pagina1"] = manejador.pagina1;
+peticion["/pagina2"] = manejador.pagina2;
+peticion["/pagina3"] = manejador.pagina3;
+peticion["/favicon.ico"] = manejador.favicon;
+servidor.iniciar(enrutador.enrutar, peticion);
