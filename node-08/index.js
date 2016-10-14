@@ -1,6 +1,7 @@
 var servidor = require('./server.js');
 var enrutador = require('./router.js');
 var manejador = require('./handler.js');
+var moment = require('moment');
 var peticion = {};
 peticion["/"] = manejador.inicio;
 peticion["/inicio"] = manejador.inicio;
