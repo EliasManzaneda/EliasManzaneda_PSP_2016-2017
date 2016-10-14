@@ -1,4 +1,3 @@
-var moment = require('moment');
 var http = require('http');
 var url = require('url');
 var fs = require('fs');
@@ -7,7 +6,7 @@ var querystring = require("querystring");
 function iniciar(enrutar, request){
 	function arrancarServidor(peticion, respuesta){
 		
-		console.log("Se ha conectado un cliente a las "  + moment().format() + "\n");
+		//console.log("Se ha conectado un cliente a las "  + moment().format() + "\n");
 		
 		var ruta = url.parse(peticion.url).pathname;
 		
@@ -26,12 +25,12 @@ function iniciar(enrutar, request){
 		
 		
 		var archivo_accesos = fs.createWriteStream("accesos.txt", {"flags":"a"});
-		archivo_accesos.write("\n" + ruta + " - " + moment().format() + "\n");
+		archivo_accesos.write("\n" + ruta + " - " + "\n");
 		
 		
 		
 		if(peticion.method == "POST"){
-			console.log("Peticion por POST a las " + moment().format());
+			//console.log("Peticion por POST a las " + moment().format());
 			var posData = null;
 			peticion.setEncoding("utf8");
 			
